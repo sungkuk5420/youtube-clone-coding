@@ -1,7 +1,7 @@
 <template>
   <div class="search-form">
     <div class="search-bar-wrapper">
-      <input type="text" placeholder="검색" />
+      <input type="text" placeholder="Search" />
       <q-btn icon="search" class="text-primary search-button" />
       <q-btn
         class="text-primary record-icon"

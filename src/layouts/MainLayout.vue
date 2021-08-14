@@ -1,9 +1,8 @@
 <template>
   <q-layout view="hHh lpR fFf">
     <Header :left="left" @click-drawer-icon="changeToShowLeftDrawer"></Header>
-    <q-drawer v-model="left" side="left" behavior="mobile" overlay bordered>
-      <!-- drawer content -->
-    </q-drawer>
+    
+    <Drawer :left="left" ></Drawer>
 
     <q-page-container>
       <router-view />
@@ -12,12 +11,13 @@
 </template>
 
 <script>
-import Header from "src/projects/header.vue";
+import Header from "src/projects/Header.vue";
+import Drawer from "src/projects/Drawer.vue";
 export default {
-  components: { Header },
+  components: { Header, Drawer },
   data() {
     return {
-      left: false,
+      left: true,
     };
   },
   methods: {
