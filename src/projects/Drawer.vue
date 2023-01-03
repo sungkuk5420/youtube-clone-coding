@@ -4,7 +4,7 @@
     <ul>
       <li>
         <q-icon name="home"></q-icon>
-        <div class="icon-label">Home</div>
+        <div class="icon-label" @click="$router.push('/')">Home</div>
       </li>
       <li>
         <q-icon name="explore"></q-icon>

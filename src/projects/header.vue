@@ -2,14 +2,7 @@
   <q-header class="bg-white text-white flex">
     <q-toolbar class="no-padding no-margin">
       <div class="flex align-center">
-        <q-btn
-          class="text-primary menu-icon"
-          dense
-          flat
-          round
-          icon="menu"
-          @click="$emit('click-drawer-icon')"
-        />
+        <q-btn class="text-primary menu-icon" dense flat round icon="menu" @click="$emit('click-drawer-icon')" />
         <YoutubeIcon></YoutubeIcon>
       </div>
       <SearchForm></SearchForm>
@@ -40,6 +33,7 @@ export default {
   height: 56px;
   padding: 0 16px;
 }
+
 .q-toolbar {
   display: flex;
   justify-content: space-between;
@@ -47,6 +41,7 @@ export default {
   width: 100%;
   flex: none;
 }
+
 .menu-icon {
   width: 40px;
   height: 40px;
