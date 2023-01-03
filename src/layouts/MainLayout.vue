@@ -1,9 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
     <Header :left="left" @click-drawer-icon="changeToShowLeftDrawer"></Header>
-    
-    <Drawer :left="left" ></Drawer>
-
+    <Drawer :left="left"></Drawer>
     <q-page-container>
       <router-view />
     </q-page-container>

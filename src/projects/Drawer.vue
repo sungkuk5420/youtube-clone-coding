@@ -1,5 +1,6 @@
 <template>
-  <q-drawer width="240" v-model="localLeft" side="left" behavior="desktop" overlay bordered>
+  <q-drawer width="240" show-if-above :breakpoint="700" elevated v-model="localLeft" side="left" behavior="desktop"
+    bordered>
     <ul>
       <li>
         <q-icon name="home"></q-icon>
@@ -10,7 +11,7 @@
         <div class="icon-label">Explore</div>
       </li>
       <li>
-        <SubscriptionIcon/> 
+        <SubscriptionIcon />
         <div class="icon-label">Subscription</div>
       </li>
       <li>
@@ -18,34 +19,34 @@
         <div class="icon-label">Original</div>
       </li>
       <li>
-        <YoutubeMusicIcon/>
+        <YoutubeMusicIcon />
         <div class="icon-label">Youtube Music</div>
       </li>
     </ul>
     <div class="border-line"></div>
     <ul>
       <li>
-        <LockerIcon/>
+        <LockerIcon />
         <div class="icon-label">보관함</div>
       </li>
       <li>
-        <ViewingRecordIcon/>
+        <ViewingRecordIcon />
         <div class="icon-label">시청기록</div>
       </li>
       <li>
-        <MyVideoIcon/>
+        <MyVideoIcon />
         <div class="icon-label">내 동영상</div>
       </li>
       <li>
-        <VideoToWatchLaterIcon/>
+        <VideoToWatchLaterIcon />
         <div class="icon-label">나중에 볼 동영상</div>
       </li>
       <li>
-        <LikedVideosIcon/>
+        <LikedVideosIcon />
         <div class="icon-label">좋아요 표시한 동영상</div>
       </li>
       <li>
-        <YoutubeMusicIcon/>
+        <YoutubeMusicIcon />
         <div class="icon-label">더보기</div>
       </li>
     </ul>
@@ -61,11 +62,13 @@ import MyVideoIcon from "../components/MyVideoIcon"
 import VideoToWatchLaterIcon from "../components/VideoToWatchLaterIcon"
 import LikedVideosIcon from "../components/LikedVideosIcon"
 export default {
-  components: { YoutubeMusicIcon,SubscriptionIcon,LockerIcon,
-ViewingRecordIcon,
-MyVideoIcon,
-VideoToWatchLaterIcon,
-LikedVideosIcon },
+  components: {
+    YoutubeMusicIcon, SubscriptionIcon, LockerIcon,
+    ViewingRecordIcon,
+    MyVideoIcon,
+    VideoToWatchLaterIcon,
+    LikedVideosIcon
+  },
   props: ["left"],
   watch: {
     left() {
@@ -74,45 +77,47 @@ LikedVideosIcon },
   },
   data() {
     return {
-      localLeft:true
+      localLeft: true
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-ul{
+ul {
   margin: 0;
   padding: 12px 0;
   list-style: none;
-  li{
+
+  li {
     display: flex;
     align-items: center;
     width: 100%;
     height: 40px;
     padding: 0 24px;
-    &:hover{
+
+    &:hover {
       cursor: pointer;
-      background:rgb(0 0 0 / 5%);
+      background: rgb(0 0 0 / 5%);
     }
+
     svg,
-    .q-icon{
-      fill:#606060;
-      color:#606060;
+    .q-icon {
+      fill: #606060;
+      color: #606060;
       font-size: 24px;
       flex: none;
       width: 24px;
-      height:24px;
+      height: 24px;
       margin-right: 24px;
     }
-    .icon-label{
 
-    }
+    .icon-label {}
   }
 }
 
-.border-line{
-  height:1px;
-  background:rgb(0 0 0 / 10%);
+.border-line {
+  height: 1px;
+  background: rgb(0 0 0 / 10%);
 }
 </style>
