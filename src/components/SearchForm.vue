@@ -1,7 +1,7 @@
 <template>
   <div class="search-form">
     <div class="search-bar-wrapper">
-      <input type="text" placeholder="Search" v-model="text" @input="search" />
+      <input type="text" placeholder="Search" v-model="text" @input="search" style="width:100%" />
       <q-btn icon="search" class="text-primary search-button" />
       <q-btn class="text-primary record-icon" dense flat round icon="mic" @click="$emit('click-drawer-icon')" />
     </div>

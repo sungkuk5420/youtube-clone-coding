@@ -10,13 +10,18 @@ export default {
 </script>
 
 <style lang="scss">
+html,
+body {
+  overflow: hidden;
+}
+
+html,
 body,
 #q-app,
 .q-layout,
 .q-page-container,
 .q-page {
   height: 100%;
-  ;
 }
 
 .q-item {
@@ -44,13 +49,31 @@ body,
 
 
 <style lang="scss">
-@media screen and (min-width: 992px) {
-  .q-list.q-list-link {
-    .q-item {
-      display: block;
-      width: 100%;
-    }
+@media screen and (max-width: 991px) {
+
+  .q-drawer-container,
+  .q-drawer,
+  .menu-icon,
+  .record-icon,
+  .header-right-icons {
+    display: none !important;
   }
+
+  .search-bar-wrapper {
+    margin-left: 10px !important;
+  }
+
+  .q-page-container {
+    padding-left: 0 !important;
+  }
+
+  .col-7 {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
 
   .q-item {
     display: inline-flex;
