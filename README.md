@@ -1,6 +1,6 @@
 # Youtube Clone Coding
 유튜브 클론 코딩입니다.
-
+ユーチューブ模写コーディングです。
 ## Demo / 데모 / デモサイト
 
 [Link Open](https://youtube-clone-coding.netlify.app/#/)
